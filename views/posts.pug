@@ -6,12 +6,55 @@ html(lang="ja")
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
     crossorigin="anonymous")
-
-    title 秘密の匿名掲示板
+    style.
+      *:focus {
+        box-shadow:none !important;
+      }
+      .btn-primary {
+        background: #F57C00;
+        border: 2px solid #F57C00;
+      }
+      .btn-primary:hover {
+        background: #EF6C00;
+        border: 2px solid #EF6C00;
+      }
+      .btn-primary:not(:disabled):not(.disabled):active {
+        background: #E65100;
+        border: 2px solid #E65100;
+      }
+      .btn-danger {
+        background: #e74c3c;
+        border: 2px solid #e74c3c;
+      }
+      .btn-danger:hover {
+        background: #e53935;
+        border: 2px solid #e53935;
+      }
+      .btn-danger:not(:disabled):not(.disabled):active {
+        background: #d32f2f;
+        border: 2px solid #d32f2f;
+      }
+      .btn-outline-info {
+        color: #1976D2;
+        border: 1px solid #1976D2;
+      }
+      .btn-outline-info:hover {
+        background: none;
+        color: #1976D2;
+        border: 1px solid #1976D2;
+      }
+      .btn-outline-info:not(:disabled):not(.disabled):active {
+        background: #1565C0;
+        border: 1px solid #1565C0;
+      }
+    title オリジナル匿名掲示板
+  
   body.container
     div.my-3
-      a(href="/logout").btn.btn-info.float-right ログアウト
-      h1 秘密の匿名掲示板
+      a(href="/logout").btn.btn-outline-info.float-right ログアウト
+      h1 オリジナル匿名掲示板
+    hr
+    br
     h2 新規投稿
     form(method="post" action="/posts")
       div.form-group
@@ -19,6 +62,8 @@ html(lang="ja")
         input(type="hidden" name="oneTimeToken" value=oneTimeToken)
       div.form-group
         button(type="submit").btn.btn-primary 投稿
+      br
+      hr
     h2 投稿一覧
     each post in posts
       div.card.my-3
