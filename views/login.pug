@@ -1,0 +1,67 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='UTF-8')
+    title
+  body
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk', crossorigin='anonymous')
+    .outer
+      .inner
+        hr
+        form.form-signin(action='/login', method='POST')
+          h2 掲示板にログイン
+          br
+          .form-group
+            label
+              input.form-control(name='username', type='text', placeholder='ユーザー名', required='', autofocus='')
+            label
+              input.form-control(name='pass', type='password', placeholder='パスワード', required='')
+            label
+              input(type='hidden', name='oneTimeToken' value=oneTimeToken)
+          input.btn.btn-primary.btn-block.btn-lg(type='submit', value='ログイン')
+        hr
+    style.
+      hr {
+      width: 30vw;
+      }
+      .outer {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      }
+      .inner {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      }
+      .form-control {
+      width: 270px;
+      margin: 1px auto;
+      }
+      .btn-primary {
+      margin-top: 20px;
+      }
+      .form-signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 30px;
+      margin: 10px auto;
+      }
+      *:focus {
+      box-shadow: none !important;
+      }
+      .btn-primary {
+      background: #1976D2;
+      border: 2px solid #1976D2;
+      }
+      .btn-primary:hover {
+      background: #1565C0;
+      border: 2px solid #1565C0;
+      }
+      .btn-primary:not(:disabled):not(.disabled):active {
+      background: #1565C0;
+      border: 2px solid #1565C0;
+      }
