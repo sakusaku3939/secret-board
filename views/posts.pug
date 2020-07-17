@@ -47,11 +47,28 @@ html(lang="ja")
         background: #1565C0;
         border: 1px solid #1565C0;
       }
+      .btn-info {
+        background: #1976D2;
+        border: 3px solid #1976D2;
+      }
+      .btn-info:hover {
+        background: #1565C0;
+        border: 3px solid #1565C0;
+      }
+      .btn-info:not(:disabled):not(.disabled):active {
+        background: #1565C0;
+        border: 3px solid #1565C0;
+      }
     title 匿名掲示板
   
   body.container
+    .alert.alert-warning.alert-dismissible(role='alert')
+      button.close(type='button', data-dismiss='alert', aria-label='Close')
+        span(aria-hidden='true') ×
+      |  ログアウトしました。
     div.my-3
-      a(href="/logout").btn.btn-outline-info.float-right ログアウト
+      a(href="/login").btn.btn-info.float-right ログイン
+      //- a(href="/logout").btn.btn-outline-info.float-right ログアウト
       h1 匿名掲示板
     hr
     br
