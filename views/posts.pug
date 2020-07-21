@@ -63,13 +63,13 @@ html(lang="ja")
   
   body.container
     if message === 1
-      .alert.alert-success.alert-dismissible(role='success')
-        button.close(type='button', data-dismiss='success', aria-label='Close')
+      .alert.alert-success.alert-dismissible(role='alert')
+        button.close(type='button', data-dismiss='alert', aria-label='Close' onclick='history.replaceState(null,null,"/posts")')
           span(aria-hidden='true') ×
         |  ログインしました。
     else if message === 2
       .alert.alert-warning.alert-dismissible(role='alert')
-        button.close(type='button', data-dismiss='alert', aria-label='Close')
+        button.close(type='button', data-dismiss='alert', aria-label='Close' onclick='history.replaceState(null,null,"/posts")')
           span(aria-hidden='true') ×
         |  ログアウトしました。
     div.my-3
