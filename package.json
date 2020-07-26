@@ -9,6 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "clean-css": "^4.1.11",
     "cookies": "0.5.1",
     "dotenv": "^8.2.0",
     "http-auth": "3.2.3",
