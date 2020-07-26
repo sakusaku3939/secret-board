@@ -106,7 +106,7 @@ html(lang="ja")
           - var isAdmin = (user === 'admin')
           if isAdmin
             div 投稿者: #{post.postedBy}
-          - var isDeletable = (user === post.postedBy || isAdmin)
+          - var isDeletable = (id === originalTrackingId || isAdmin)
           if isDeletable
             form(method="post" action="/posts?delete=1")
               input(type="hidden" name="id" value=post.id)
