@@ -108,10 +108,10 @@ html(lang="ja")
       div.card.my-3
         div.card-header
           - var isPostedByAdmin = (post.postedBy === 'admin')
+          - var originalTrackingId = post.trackingCookie ? post.trackingCookie.split('_')[0] : ''
           if isPostedByAdmin
             b(style="white-space:pre-wrap; overflow:auto; color: #FB8C00;") #{post.id} :  管理人 ★
           else
-            - var originalTrackingId = post.trackingCookie ? post.trackingCookie.split('_')[0] : ''
             span(style="white-space:pre-wrap; overflow:auto;") #{post.id} :  #{post.name}
             span.float-right ID: #{originalTrackingId}
         div.card-body
