@@ -91,7 +91,7 @@ html(lang="ja")
     br
     form(method="post" action="/posts")
       div.form-group
-        input(type="text" value="名無しさん").form-control
+        input(name="name" type="text" value="名無しさん").form-control
       div.form-group
         textarea(name="content" rows="4").form-control
         input(type="hidden" name="oneTimeToken" value=oneTimeToken)
@@ -108,7 +108,8 @@ html(lang="ja")
             span #{post.id} : 管理人 ★
           else
             - var originalTrackingId = post.trackingCookie ? post.trackingCookie.split('_')[0] : ''
-            span #{post.id} : ID:#{originalTrackingId}
+            span(style="white-space:pre-wrap; overflow:auto;") #{post.id} :  #{post.name}
+            span.float-right ID: #{originalTrackingId}
         div.card-body
           p.card-text(style="white-space:pre-wrap; overflow:auto;") #{post.content}
         div.card-footer
