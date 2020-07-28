@@ -89,8 +89,9 @@ html(lang="ja")
       h1 匿名掲示板
     hr
     br
-    h2 新規投稿
     form(method="post" action="/posts")
+      div.form-group
+        input(type="text" value="名無しさん").form-control
       div.form-group
         textarea(name="content" rows="4").form-control
         input(type="hidden" name="oneTimeToken" value=oneTimeToken)
