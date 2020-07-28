@@ -85,7 +85,7 @@ html(lang="ja")
         a(href="/logout").btn.btn-outline-info.float-right ログアウト
         div.user.float-right
           i.far.fa-user
-          span(style="margin-left: 8px;") #{user}
+          span(style="margin: 0 8px") #{user}
       h1 匿名掲示板
     hr
     br
@@ -105,7 +105,7 @@ html(lang="ja")
         div.card-header
           - var isPostedByAdmin = (post.postedBy === 'admin')
           if isPostedByAdmin
-            span #{post.id} : 管理人 ★
+            b(style="white-space:pre-wrap; overflow:auto; color: #FB8C00;") #{post.id} :  管理人 ★
           else
             - var originalTrackingId = post.trackingCookie ? post.trackingCookie.split('_')[0] : ''
             span(style="white-space:pre-wrap; overflow:auto;") #{post.id} :  #{post.name}
