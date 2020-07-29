@@ -5,6 +5,8 @@ html(lang='ja')
     title オリジナル匿名掲示板
   body
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk', crossorigin='anonymous')
+    if isFailed
+      .alert.alert-danger.custom-alert(role='alert') ログインに失敗しました。IDまたはパスワードが正しくありません。
     .outer
       .inner
         hr
@@ -23,6 +25,13 @@ html(lang='ja')
     style.
       hr {
       width: 30vw;
+      }
+      .custom-alert {
+        position: absolute;
+        width: 60vw;
+        left: 50%;
+        transform: translateY(0) translateX(-50%);
+        -webkit- transform: translateY(0) translateX(-50%);
       }
       .outer {
       width: 100vw;
