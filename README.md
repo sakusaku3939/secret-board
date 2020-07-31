@@ -11,3 +11,6 @@ Node.jsのhttpモジュールのみを使用して制作しました。有名な
 | --------- | --------- |
 | guest1    | 1111      |
 | guest2    | 2222      |
+
+# ライセンス
+- [ISC license](https://www.isc.org/licenses/)
