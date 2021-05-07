@@ -16,7 +16,7 @@
     "moment-timezone": "^0.5.33",
     "pg": "8.6.0",
     "pg-hstore": "2.3.3",
-    "pug": "3.0.2",
+    "pug": "3.0.1",
     "sequelize": "6.6.2"
   },
   "engines": {
